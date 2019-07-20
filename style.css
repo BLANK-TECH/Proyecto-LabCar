@@ -1,6 +1,7 @@
 *{
     margin:0;
     padding: 0;
+    font-family: sans-serif;
 }
 
 .logo img{
@@ -23,6 +24,7 @@
     background: #f7b617;
     color: white;
     display:none;
+    font-size: 1.5rem;
 }
 .hero{
     display:grid;
@@ -38,7 +40,6 @@
 .register-mobile{
     color: white;
     font-size: 1.5rem;
-    font-family: sans-serif;
     background: #f7b617;
     grid-column-start: 2;
     grid-row-start: 2;
@@ -89,9 +90,245 @@
     margin-top: 5%;
 }
 
+/*Pantalla Conduce*/
+.drive-mobile{
+    background-image: url("./imagenes/conduce.jpg");
+    background-repeat: no-repeat;
+    background-size: 130%;
+    background-position: right;
+    width: 100%;
+    height: 312px;
+    position: relative;
+}
+.drive-mobile::before{
+    content: "";
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.text-drive-mobile{
+    color:white;
+    text-align: left;
+    position: relative;
+    padding-top: 15%;
+    font-size: 0.9rem;
 
-.footer{
+}
+.text-drive-mobile p{
+    margin:5%; 
+       
+}
+.text-drive-mobile h3{
+    margin-left: 5%;
+}
+.text-drive-mobile a{
+    text-decoration: none;
+    
+}
+.button-drive-mobile{
+    background-color:  #f7b617;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    display: inline; 
+}
+
+/*Pantalla tarifa*/
+.rate{
+    background-color: #f7b617;
+    color: white;
+    width: 100%;
+    height: 550px;
+}
+.rate-mobile input{
+    background-color: #f7b617;
+    border: thin solid white;
+    border-radius: 5px;
+    width: 70%;
+    text-decoration-color: white;
+    padding: 2%;
+}
+::-webkit-input-placeholder { color: white;
+font-size: 0.6rem }
+
+.rate-mobile{
+    padding-top: 15%;
+    padding-left: 3%;
+}
+.rate-mobile p, img, input{
+    margin:5px;
+}
+.rate-mobile p{
+    font-size: 0.8rem;
+}
+.rate-mobile a{
+    text-decoration: none;
+}
+#Trazar-ruta{
+    text-align: center;
+    margin-top: 15px;
+    
+}
+#button-rate-mobile{
+    color: black;
+    text-align: center;
+    background-color: white;
+    display: inline;
+    padding: 10px;
+    font-size: 0.6rem;
+}
+.map{
+    width:70%;
+    height:40%;
+    border: thin solid white;
+    margin-top: 30%;
+    margin-left: 13%;
+}
+.map iframe{
+    width: 98%;
+    height: 100%;
+    padding: 2px;
+}
+
+.footer-mobile{
     background:#2b2b2b;
     color: white;
+    width: 100%;
+    height: 400px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 10% auto 10%;
+    grid-template-areas: "header-footer header-footer"
+                         "main-footer-menu main-footer-icons"
+                         "footer-footer footer-footer";
+}
+.header-footer{
+    border-bottom: thin solid white;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 5px;
+    grid-area:header-footer;
+}
+.header-footer img{
+    width: 20%;
+}
+.main-footer-menu{
+    grid-area: main-footer-menu;
+}
+.main-footer-menu a{
+    text-decoration: none;
+    color: white;
+    font-size: 0.8rem;
+    padding: 10px;
+}
+.main-footer-menu li{
+    display: inline-block;
+    width: 70%;
+    margin: 10px;
+}
+.main-footer-icons{
+    grid-area: main-footer-icons;
+}
+.main-footer-icons i{
+    margin: 6px;
+}
+.main-footer-icons img{
+    width: 60%;
+}
+.footer-footer{
+    grid-area: footer-footer;
+    padding: 5px;
+    font-size: 0.6rem;
+    border-top: thin solid white;
+    margin: 10px;
+}
+
+@media (min-width: 601px) {
+    /*Navbar*/
+    .logo img{
+        width: 100%;
+    }
+    .navbar a{
+        display: block;
+    }
+    .icon-menu{
+        display:none;
+    }
+    .navbar figure{
+        margin: 0;
+    }
+    .navbar-container{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+    }
+    .navbar-container li{
+        display:inline-block;
+        margin:10px;
+        
+    }
+    .navbar-container li a{
+        padding: 0.5rem 1 rem;
+    }
+    /*Pantalla Hero*/
+    register-mobile{
+        display: none;
+      }
+      .register-desktop{
+          display:block;
+          grid-column-start: 2;
+          grid-row-start: 2;
+          grid-row-end: 3;
+      }
+      .hero{
+          display:none;
+      } 
+       
+      .hero-desktop{
+        display:grid;
+        grid-template-columns: 60% 40%;
+        grid-template-rows: 30% auto 30%;
+        width: 100%;
+        height: 900px; 
+        background: url(./imagenes/taxi.jpg);
+        background-position: bottom;
+        background-size: 100%;
+        background-repeat: no-repeat;  
+    }
+    .register-desktop{
+        padding: 1.5rem;
+    }
+    .register-desktop p{
+        font-size: 1.2rem;
+    }
+    .register-desktop button{
+        padding: 0.6rem;
+        background-color: white;
+        border-radius: 5px;
+        border: thin solid white;
+        margin-top: 1rem;
+    }
+    .hero-registrate{
+        display:flex;
+        justify-content: space-between;
+    }
+    .hero-registrate p{
+        display: inline;
+        margin: 5px;
+    }
+    .register-desktop a{
+        display: inline-block;
+        padding: 0.8rem;
+        background: white;
+        text-decoration: none;
+        color: black;
+        font-size: 1.2rem;
+        margin: 2rem 0;
+    }
+
     
 }
