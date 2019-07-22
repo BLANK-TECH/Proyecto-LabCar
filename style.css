@@ -252,6 +252,8 @@ font-size: 0.6rem }
     display:none;
 }
 
+
+
 @media (min-width: 601px) {
     /*Navbar*/
     .logo img{
@@ -515,11 +517,72 @@ font-size: 0.6rem }
         width: 40%;
         display: block;
     }
-    
+      
+}
+
+/*Modal-Iniciar*/
+.overlay{
+    background: rgba(0, 0, 0, 0.6);
+    position:fixed;
+    top:0;
+    bottom: 0;
+    left:0;
+    right:0;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+} 
+.modal-iniciar{
+    background-color: rgba(54, 212, 172);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    border-radius: 7px;
+    text-align: center;
+    width: 50%;
+    height: 60%;
+}
+.modal-iniciar .btn-cerrar-iniciar{
+    font-size: 1rem;
+    line-height: 1rem;
+    display: block;
+    text-align: right;
+    color: white;
+    transition: .3s ease all;
+    padding-right: 10px;
+    padding-top:10px;
     
 
-
-    
-
+}
+.modal-iniciar .btn-cerrar-iniciar i:hover{
+    background: blue;
+}
+.modal-iniciar .box-img-perfil{
+    border-bottom: thin solid white;
+    margin:0;
     
 }
+.modal-iniciar .img-perfil{
+    width: 30%;
+}
+.modal-iniciar .box-user{
+    background: white;
+    width: 60%;
+    height: 50%;
+    margin-top: 2rem;
+    margin-left: 8rem;
+    border-radius: 6px;
+}
+.modal-iniciar form .contenedor-inputs input{
+    width: 80%;
+    height: 2.1rem;
+    margin-top: 1.5rem;
+    margin-left: 0;
+}
+.modal-iniciar form .contenedor-inputs i{
+    border: thin solid grey;
+    padding:10px;
+    margin-top:5px;
+}
+#overlay{
+    display:none;
+}
+

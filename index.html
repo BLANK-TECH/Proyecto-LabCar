@@ -23,7 +23,7 @@
                 <ul>
                     <li><a href="#">Viaja</a></li>        
                     <li><a href="#">Conduce</a></li>        
-                    <li><a href="#">Inicia sesión</a></li>          
+                    <li><a href="#" id="open-modal">Inicia sesión</a></li>          
                 </ul>
             </nav>
             </div>
@@ -177,6 +177,30 @@
                             </div>
                 </div>            
         </div>
+
+        <!--Modales-->
+        <div class="overlay" id="overlay">
+            <div class="modal-iniciar">
+                <figure class="box-img-perfil">
+                    <a href="#" id="btn-cerrar-iniciar" class="btn-cerrar-iniciar"><i class="fas fa-times"></i></a>
+                    <img class="img-perfil" src="imagenes/perfil.png">
+                </figure>
+                
+            <div class="box-user">
+                <form action="">
+                        <div class="contenedor-inputs">
+                            <i class="fas fa-user"></i><input type="text" placeholder="Name">
+                            <i class="fas fa-lock"></i><input type="text" placeholder="Password">
+                        </div>
+                            <button id="login">LOGIN</button>
+                </form>
+                <p>Forgot password?<a href="click-login">Click Here</a></p>
+            </div>
+            </div>
+        </div>
+
+
     </div>
+    <script src="overlay.js"></script>
 </body>
 </html>
